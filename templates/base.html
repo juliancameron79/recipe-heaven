@@ -1,369 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Recipe Heaven</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta name="description" content="Recipe Heaven | A Recipe Cookbook for Pythons!" />
-    <meta name="author" content="Julian Cameron" />
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css" />
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
-    <link rel="stylesheet" href="{{url_for('static', filename='css/hover.css')}}" type="text/css" />
-  </head>
-  <body>
-        <body class="body-custom">
-                <header>
-                    <div class="navbar-fixed">
-                        <nav class="nav-bar">
-                            <div class="container">
-                                <div class="nav-wrapper">
-                                    <a href="{{url_for('home_page')}}" class="brand-logo logo-color">FlaskBook</a>
-                                    <a href="#" data-activates="mobile-nav" class="button-collapse right-align">
-                                        <i class="material-icons">menu</i>
-                                    </a>
-                                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                                        <li>
-                                            <a href="{{url_for('get_recipes')}}">All recipes</a>
-                                        <li>
-                                        <li>
-                                            <a href="{{url_for('get_cuisines')}}">Cuisines</a>
-                                        <li>
-                                        <li>
-                                            <a href="{{url_for('breakfast_meals')}}">Breakfast</a>
-                                        <li>
-                                        <li>
-                                            <a href="{{url_for('lunch_meals')}}">Lunch</a>
-                                        <li>
-                                        <li>
-                                            <a href="{{url_for('dinner_meals')}}">Dinner</a>
-                                        </li>
-                                        <li>
-                                            <form id="search-form" action="{{ url_for('search_box') }}" method="POST" class="col s12 search-form">
-                                                <input id="autocomplete-input" class="autocomplete search-input" type="search" name="search_text"
-                                                    placeholder="Search" required>
-                                            </form>
-                                        </li>
-                                        <li>
-                                            <a id="sendForm" for="submit-form" class="waves-effect search-submit-button"><i class="material-icons right">search</i></a>
-                                        </li>
-                                    </ul>
-                                    <ul class="side-nav" id="mobile-nav">
-                                        <div class="mobile-nav">
-                                            <li>
-                                                <a href="{{url_for('home_page')}}">Home</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{url_for('get_recipes')}}">Recipes</a>
-                                            </li>
-                                            <a>
-                                                <li class="divider"></li>
-                                                <li>
-                                                    <a href="{{url_for('get_cuisines')}}">Cuisines</a>
-                                                </li>
-                                                <li>
-                                                    <form id="search-form" action="{{ url_for('search_box') }}" method="POST" class="col s12">
-                                                        <input id="search" type="search" name="search_text" placeholder="Search"
-                                                            required>
-                                                    </form>
-                                                </li>
-                                                <li>
-                                                    <a id="sendForm" for="submit-form" class="waves-effect waves-light btn-small"><i
-                                                            class="material-icons right">search</i></a>
-            
-                                                </li>
-                                        </div>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                </header>
-                <div class="icon-bar show-on-small hide-on-med-and-up">
-                    <a href="{{url_for('get_recipes')}}"><i class="fa fa-search"></i>
-                    </a>
-                    <a href="{{url_for('add_recipe')}}"><i class="fa fa-plus"></i>
-                    </a>
-                </div>
-            
-            
-                {% block recipes %} {% endblock %}
-                {% block add_recipe %} {% endblock %}
-                {% block edit_recipe %} {% endblock %}
-                {% block cuisines %} {% endblock %}
-                {% block add_cuisine %} {% endblock %}
-                {% block edit_cuisine %} {% endblock %}
-                {% block search_results %} {% endblock %}
-                {% block recipe_single %} {% endblock %}
-                {% block shopping_list %} {% endblock %}
-                {% block breakfast %} {% endblock %}
-                {% block lunch %} {% endblock %}
-                {% block dinner %} {% endblock %}
-                {% block dessert %} {% endblock %}
-                {% block snack %} {% endblock %}
-                {% block light_bites %} {% endblock %}
-            
-            
-                <div class="fixed-action-btn hide-on-small-only">
-                    <a class="btn-floating btn-large fab-button" href="{{url_for('add_recipe')}}">
-                        <i class="fa fa-plus tooltipped" aria-hidden="true" data-position="left" data-tooltip="Add recipe"></i>
-                    </a>
-                </div>
-            
-                <!-- jQuery -->
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                <!-- Materialize JS -->
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-                <!-- Font awesome -->
-                <script src="https://use.fontawesome.com/d46ec8e634.js"></script>
-            
-                <!-- Custom scripts -->
-                <!-- Materialize CSS init's -->
-                <script type="text/javascript">
-                    $(document).ready(function () {
-                        $('.collapsible').collapsible();
-                        $('select').material_select();
-                        $(".button-collapse").sideNav();
-                        $('.fixed-action-btn').floatingActionButton();
-                        $('.dropdown-trigger').dropdown();
-                        $('.materialboxed').materialbox();
-                        $('.slider').slider({
-                            full_width: true
-                        })
-                        $('.carousel.carousel-slider').carousel({
-                            full_width: true
-                        });
-                    });
-                    $('.datepicker').pickadate({
-                        selectMonths: true, // Creates a dropdown to control month
-                        selectYears: 15, // Creates a dropdown of 15 years to control year,
-                        today: 'Today',
-                        clear: 'Clear',
-                        close: 'Ok',
-                        closeOnSelect: false // Close upon selecting a date,
-                    });
-                </script>
-            
-                <!-- Submit search form on click search icon -->
-                <script type="text/javascript">
-                    $(document).ready(function () {
-                        $("#sendForm").click(function () {
-                            if ($('#sendFrom').html() != '') {
-                                $("#search-form").submit();
-                            }
-                        });
-                    });
-                    $(document).ready(function () {
-                        $("#sendFormMobile").click(function () {
-                            if ($('#sendFromMobile').html() != '') {
-                                $("#search-form-mobile").submit();
-                            }
-                        });
-                    });
-                </script>
-            
-                <!-- Sort recipes on select change -->
-                <script>
-                    $(function () {
-                        // bind change event to select
-                        $('#sort-select').on('change', function () {
-                            var url = $(this).val(); // get selected value
-                            if (url == 'desc') {
-                                window.location = "{{url_for('recipes_time_desc')}}"; // redirect
-                            }
-                            if (url == 'asc') {
-                                window.location = "{{url_for('recipes_time_asc')}}"; // redirect
-                            }
-                            if (url == 'votes-desc') {
-                                window.location = "{{url_for('votes_desc')}}"; // redirect
-                            }
-                            if (url == 'votes-asc') {
-                                window.location = "{{url_for('votes_asc')}}"; // redirect
-                            }
-                            if (url == 'date-desc') {
-                                window.location = "{{url_for('date_desc')}}"; // redirect
-                            }
-                            if (url == 'date-asc') {
-                                window.location = "{{url_for('date_asc')}}"; // redirect
-                            }
-                            return false;
-                        });
-                    });
-                </script>
-            
-            
-                <!-- Add?Remove ingredients inputs -->
-                <script>
-                    $(document).ready(function () {
-                        // ingredients
-                        var ingredientCounter = 2;
-                        $("#addIngredient").click(function () {
-                            $(".removeIngredientDiv").show();
-            
-                            if (ingredientCounter > 10) {
-                                alert("Only 10 steps allowed");
-                                return false;
-                            }
-            
-                            var newTextBoxDiv = $(document.createElement('div'))
-                                .attr("class", 'input-field col s12')
-                                .attr("id", 'TextBoxDivIngredients' + ingredientCounter);
-            
-                            newTextBoxDiv.after().html(
-                                '<input  id="recipe_ingredient" name="ingredient" type="text" required placeholder="extra ingredient">'
-                            );
-                            newTextBoxDiv.appendTo("#TextBoxDivIngredients");
-                            ingredientCounter++;
-                        });
-            
-                        $("#removeIngredient").click(function () {
-                            console.log(ingredientCounter)
-                            if (ingredientCounter <= 1) {
-                                $("#removeIngredient").prop('disabled', true);
-                                return false;
-                            }
-                            if (ingredientCounter <= 3) {
-                                $("#removeIngredient").hide();
-                            }
-            
-                            ingredientCounter--;
-            
-                            $("#TextBoxDivIngredients" + ingredientCounter).remove();
-            
-                        });
-                    });
-                </script>
-            
-                <!-- AutoComplete for search bar terms -->
-                <script>
-                    $(document).ready(function () {
-                        $('input.autocomplete').autocomplete({
-                            data: {
-                                "salt": null,
-                                "pepper": null,
-                                "oil": null,
-                                "flour": null,
-                                "garlic": null,
-                                "sugar": null,
-                                "water": null,
-                                "onion": null,
-                                "olive": null,
-                                "chicken": null,
-                                "juice": null,
-                                "milk": null,
-                                "lemon": null,
-                                "butter": null,
-                                "egg": null,
-                                "cheese": null,
-                                "wheat": null,
-                                "vegetable": null,
-                                "vanilla": null,
-                                "vinegar": null,
-                                "parsley": null,
-                                "honey": null,
-                                "soy": null,
-                                "wine": null,
-                                "seeds": null,
-                                "celery": null,
-                                "rice": null,
-                                "cinnamon": null,
-                                "tomato": null,
-                                "bread": null,
-                                "eggs": null,
-                                "onions": null,
-                                "yeast": null,
-                                "leaves": null,
-                                "broth": null,
-                                "tomatoes": null,
-                                "cream": null,
-                                "cloves": null,
-                                "thyme": null,
-                                "peeled": null,
-                                "ginger": null,
-                                "beans": null,
-                                "soda": null,
-                                "basil": null,
-                                "mushrooms": null,
-                                "apple": null,
-                                "parmesan": null,
-                                "yogurt": null,
-                                "stock": null,
-                                "bell": null,
-                                "oats": null,
-                                "sodium": null,
-                                "beef": null,
-                                "flakes": null,
-                                "carrot": null,
-                                "oregano": null,
-                                "chocolate": null,
-                                "cumin": null,
-                                "paprika": null,
-                                "sesame": null,
-                                "mustard": null,
-                                "spinach": null,
-                                "corn": null,
-                                "potatoes": null,
-                                "coconut": null,
-                                "carrots": null,
-                                "nutmeg": null,
-                                "cilantro": null,
-                                "raisins": null,
-                                "chili": null,
-                                "syrup": null,
-                                "peas": null,
-                                "peanut": null,
-                                "almond": null,
-                                "walnuts": null,
-                                "canned": null,
-                                "lime": null,
-                                "leaf": null,
-                                "pineapple": null,
-                                "margarine": null,
-                                "cabbage": null,
-                                "cucumber": null,
-                                "broccoli": null,
-                                "cornstarch": null,
-                                "zucchini": null,
-                                "coriander": null,
-                                "paste": null,
-                                "turkey": null,
-                                "banana": null,
-                                "almonds": null,
-                                "nuts": null,
-                                "maple": null,
-                                "cheddar": null,
-                                "cider": null,
-                                "scallions": null,
-                                "dill": null,
-                                "lettuce": null
-                            },
-                        });
-                    });
-                </script>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <!-- Navigation -->
+    {% block navbar %} {% endblock %}
+  </header>
+
+  {% block content %} {% endblock %} {% block recipe_single %} {% endblock %} {% block add_recipe %} {% endblock %}
+  <!-- Footer -->
+  <div class="footer ">
+    <div class="container float-right">
+      <div class="row text-center">
+        <div class="col-sm-12 col-md-12 copy-right-text">
+          <p class="copyright">
+            &copy; Tagged Media
+            <script type="text/JavaScript">
+                document.write(new Date().getFullYear());
+              </script>. All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
 </html>

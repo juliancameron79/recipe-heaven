@@ -1,92 +1,96 @@
-{% extends 'base.html' %} {% block edit_recipe %}
-<div class="container form-container">
-    <div class="row margin-bottom-5vh">
-        <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s10 offset-s1 l8 offset-l2 add-recipe-form">
-            <div class="row">
-                <h5>Edit recipe</h5>
-                <hr>
-                <div class="input-field col s12">
-                    <div class="row">
-                        <div class="input-field"><input id="title" name="title" type="text" value="{{recipe.title}}"
-                                required>
-                            <label for="title">Cuisine</label></div>
-                        <div class="input-field">
-                            <input id="description" name="description" type="text" value="{{recipe.description}}"
-                                required>
-                            <label for="description">Description</label>
-                        </div>
-                        <div class="input-field">
-                            <input id="method" name="method" type="text" value="{{recipe.method}}" required>
-                            <label for="method">Method</label>
-                        </div>
-                    </div>
-                </div>
-                <div id="TextBoxesGroupIngredients">
-                    <!-- Ingredients -->
-                    <div class="input-field col s12" id="TextBoxDivIngredients">
-                        {% for ingredient in recipe.ingredients %}
-                        <input id="recipe_ingredient" name="ingredient" type="text" value="{{ingredient}}">
-                        {% endfor %}
-                        <div class="row">
-                            <a class="btn waves-effect waves-light btn-x-small" id="addIngredient"><i class="fa fa-plus"
-                                    aria-hidden="true"></i></a>
-                            <a class="btn waves-effect waves-light btn-x-small red removeIngredientDiv" id="removeIngredient"
-                                style="display: none"><i class="fa fa-minus" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="input-field col s12">
-                    <div class="col s6 l3 input-field" id="recipe_meal">
-                        <select class="form-control" id="meal" name="meal" required>
-                            {% for meal in meals %}
-                            <option value="{{meal.meal}}">{{meal.meal}}</option>
-                            {% endfor %}
-                            <label for="recipe_meal">Meal</label>
-                        </select>
-                    </div>
-                    <div class="col s6 l3 input-field">
-                        <input id="recipe_serves" name="serves" type="number" placeholder="Serves" value="{{recipe.serves}}"
-                            required>
-                        <label for="recipe_serves">Serves</label>
-                    </div>
+{% extends 'base.html'%}
 
-                    <div class="col s6 l3 input-field">
-                        <input id="recipe_cook_time" name="cooking_time" type="number" placeholder="Cooking time" value="{{recipe['cooking-time']}}"
-                            required>
-                        <label for="recipe_cook_time">Cooking time</label>
-                    </div>
-                    <div class="col s6 l3 input-field">
-                        <input id="recipe_prep_time" name="prep_time" type="number" placeholder="Prep time" value="{{recipe['prep-time']}}"
-                            required>
-                        <label for="recipe_prep_time">Prep time</label>
-                    </div>
-                </div>
-            </div>
-            <div class="input-field col s12 l5">
-                <select id="cuisine_name" name="cuisine" required>
-                    {% for cuisine in cuisines %}
-                    <option value="{{cuisine.cuisine_name}}">{{cuisine.cuisine_name}}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <!-- User -->
-            <div class="input-field col s12 l5 offset-l2">
-                <select id="user_name" name="user" required>
-                    {% for user in users %}
-                    <option value="{{user.user_name}}">{{user.user_name}}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class="row add-recipe-submit-btns center-align">
-                <button class="btn waves-effect waves-light hvr-icon-up" type="submit" name="">Submit
-                    <i class="fa fa-paper-plane-o hvr-icon"></i>
-                </button>
-                <a href="{{url_for('get_recipes')}}" class="btn waves-effect waves-light red">Cancel
-                </a>
-            </div>
-        </form>
-    </div>
-</div>
-</div>
+{% block navbar %}
+
+<nav class="navbar navbar-expand-sm navbar-light navbar-light shadow-sm" style="
+background-color: #fff;
+"">
+  <div class=" container">
+  <a class="navbar-brand" style="
+    color: #e65100;
+" href="{{url_for('home_page')}}">Recipe Heaven<span class="sr-only"></span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarsExample07">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{url_for('get_recipes')}}">All Recipes<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('add_recipe')}}">Add Recipe<span class="sr-only"></span></a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+{% endblock %} {% block content %}
+
+<main role="main">
+  <div class="container">
+    <h1 class="display-4 my-4 textcolor">Edit Recipe</h1>
+  </div>
+  <div class="container">
+    <form action="{{ url_for('update_recipe', recipe_id=recipe._id)}}" method="POST">
+      <div class="form-row justify-content-between">
+        <div class="col-md-4 my-4">
+          <label for="title" class="textcolor">Recipe Title</label>
+          <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp" placeholder="Recipe Name" value="{{recipe.title}}">
+        </div>
+        <div class="col-md-6 my-4">
+          <label for="recipe_description" class="textcolor">Description</label>
+          <input type="text" class="form-control" id="recipe_description" name="description" aria-describedby="emailHelp" placeholder="Description" value="{{recipe['description']}}">
+        </div>
+      </div>
+      <div class="form-row justify-content-between my-4">
+        <div class="col-md-2 mb-3">
+          <label for="recipe_cuisine" class="textcolor">Cuisine</label>
+          <input type="text" class="form-control" id="recipe_cuisine" name="cuisine" aria-describedby="emailHelp" placeholder="French" value="{{recipe['cuisine']}}">
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="recipe_serves" class="textcolor">Serves</label>
+          <input type="text" class="form-control" id="recipe_serves" name="serves" aria-describedby="emailHelp" placeholder="2" value="{{recipe.serves}}">
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="recipe_meal_type" class="textcolor">Meal Type</label>
+          <select id="meal" name="meal_type" class="form-control">
+            <option value="" disabled selected>Choose Meal Type</option>
+            {% for mea in meal %}
+            {% if mea.meal_type == recipe.meal_type%}
+            <option value="{{mea.meal_type}}" selected>{{mea.meal_type}}</option>
+            {% else %}
+            <option value="{{mea.meal_type}}">{{mea.meal_type}}</option>
+            {% endif %}
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="recipe_prep_time" class="textcolor">Prep Time</label>
+          <input type="text" class="form-control" id="recipe_prep_time" name="prep_time" aria-describedby="emailHelp" placeholder="0mins" value="{{recipe.prep_time}}">
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="recipe_cooking_time" class="textcolor">Cooking Time</label>
+          <input type="text" class="form-control" id="recipe_cooking_time" name="cooking_time" aria-describedby="emailHelp" placeholder="0mins" value="{{recipe.cooking_time}}">
+        </div>
+      </div>
+      <div class="form-row justify-content-between my-4">
+        <div class="col-md-6 mb-3">
+          <label for="recipe_ingredients" class="textcolor">Ingredients</label>
+          <textarea type="text" class="form-control" id="recipe_ingredients" name="ingredients" rows="3" value="">{{recipe.ingredients}}</textarea>
+        </div>
+        <div class="col-md-5 mb-3">
+          <label for="recipe_directions" class="textcolor">Directions</label>
+          <textarea class="form-control" id="recipe_directions" name="directions" rows="3" value="">{{recipe.directions}}</textarea>
+        </div>
+        <div class="col-md-2 mb-3">
+          <label for="recipe_user_name" class="textcolor">User Name</label>
+          <input type="text" class="form-control" id="recipe_user_name" name="user_name" aria-describedby="emailHelp" placeholder="jane" value="{{recipe.user_name}}">
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit" name="action" value="recipe._id">Update Recipe</button>
+    </form>
+  </div>
+</main>
 
 {% endblock %}

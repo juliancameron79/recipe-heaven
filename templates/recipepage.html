@@ -1,106 +1,69 @@
-{% extends 'base.html' %} {% block recipe_single %}
-<div class="container">
-  <div class="row ">
-    <div class="col s12 m12 l7 offset-l2 margin-bottom-5vh">
-      {% for recipe in recipes %}
-      <div class="col l12">
-        <div class="card hoverable">
-          <div class="card-content">
-            <h4>
-              <span class="card-title"
-                ><strong class="strong-text"
-                  ><a href="{{url_for('recipe_single', recipe_id=recipe._id)}}" class="recipe-title-text"
-                    >{{recipe.title}}</a
-                  ></strong
-                ></span
-              >
-            </h4>
-            <li class="divider"></li>
-            <br />
-            <p>{{recipe.description}}</p>
-            <br />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12 l6">
-            <div class="card hoverable card-min-height">
-              <div class="card-content">
-                <strong>Ingredients: </strong>
-                <li class="divider"></li>
-                {% for ingredient in recipe.ingredients %}
-                <p>
-                  <strong>- {{ingredient}} </strong>
-                  {% endfor %}
-                </p>
-              </div>
+{% extends 'base.html' %} {% block navbar %}
 
-              <a
-                href="{{url_for('shopping_list', recipe_id=recipe._id)}}"
-                id="upvote"
-                class="hvr-grow waves-effect waves-light btn btn_small darken-1 tooltipped"
-                data-position="right"
-                data-tooltip="Shopping list"
-                ><i class="fa fa-shopping-cart" aria-hidden="true"></i
-              ></a>
-            </div>
-          </div>
-          <div class="col s12 l6">
-            <div class="card hoverable card-min-height">
-              <div class="card-content">
-                <strong>Details:</strong>
-                <li class="divider"></li>
-                <strong>- Preparation time: </strong>{{recipe['prep-time']}} mins. <br />
-                <strong>- Cooking time: </strong>{{recipe['cooking-time']}} mins. <br />
-                <strong>- Serves: </strong>{{recipe.serves}} people. <br />
-                <strong>- Meal time: </strong>{{recipe.meal}} <br />
-                <strong>- Cuisine: </strong>{{recipe.cuisine}} <br />
-              </div>
-            </div>
-          </div>
+<nav class="navbar navbar-expand-sm navbar-light navbar-light shadow-sm" style="background-color: #fff;">
+  <div class="container">
+    <a class="navbar-brand" style="color: #e65100;
+" href="{{url_for('home_page')}}">Recipe Heaven<span class="sr-only"></span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample07">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link textcolor" href="{{url_for('get_recipes')}}">All Recipes<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('add_recipe')}}">Add Recipe<span class="sr-only"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock %} {% block recipe_single %} {% for recipe in recipes %}
+
+<div class="container mt-5">
+  <div class="card mb-4 box-shadow 2">
+    <div class="card-header">
+      <h4 class="my-0 font-weight-normal textcolor">{{recipe.title}}</h4>
+    </div>
+    <div class="card-body">
+      <div class="row csmpc-row h-100">
+        <div class="col-md-6 d-flex flex-wrap align-content-center">
+          <div class="description">{{recipe.description}}</div>
         </div>
-        <div class="card hoverable">
-          <div class="card-content">
-            <strong>Method:</strong>
-            <li class="divider"></li>
-            {{recipe.method}}
-          </div>
-        </div>
-        <div class="card hoverable">
-          <div class="card-content">
-            <strong>Entered/Updated:</strong>
-            <li class="divider"></li>
-            {{recipe.last_modified}}
-            <strong>by </strong>{{recipe.user}}
-          </div>
-        </div>
-        <div class="card-action card-action-icons">
-          <a
-            href="#"
-            id="upvote"
-            class="hvr-grow waves-effect waves-light btn btn_small darken-1 tooltipped"
-            data-position="bottom"
-            data-tooltip="Votes"
-            ><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{recipe.votes}}</a
-          >
-          <a
-            href="{{url_for('edit_recipe', recipe_id=recipe._id)}}"
-            class="hvr-grow waves-effect waves-light btn btn_small blue tooltipped float-right"
-            data-position="bottom"
-            data-tooltip="Edit"
-            ><i class="fa fa-pencil" aria-hidden="true"></i>
-          </a>
-          <a
-            href="{{url_for('delete_recipe', recipe_id=recipe._id)}}"
-            class="hvr-grow waves-effect waves-light btn btn_small red tooltipped"
-            data-position="bottom"
-            data-tooltip="Delete"
-            ><i class="fa fa-trash" aria-hidden="true"></i>
-          </a>
+        <div class="col-md-6 my-4">
+          <div class="d-flex justify-content-center my-3 text-capitalize"><span class="textcolor font-weight-bold">Cuisine: </span> {{recipe.cuisine}}</div>
+          <div class="d-flex justify-content-center my-3"><span class="textcolor font-weight-bold">Serves: </span> {{recipe.serves}}</div>
+          <div class="d-flex justify-content-center my-3 text-capitalize"><span class="textcolor font-weight-bold">Meal: </span> {{recipe.meal_type}}</div>
+          <div class="d-flex justify-content-center my-3"><span class="textcolor font-weight-bold">Prep: </span> {{recipe.prep_time}} mins</div>
+          <div class="d-flex justify-content-center my-3"><span class="textcolor font-weight-bold">Cooking: </span> {{recipe.cooking_time}} mins</div>
         </div>
       </div>
-      {% endfor %}
+      <div class="row ingredients">
+        <div class="col-md-6 mt-3">
+          <h4 class="display-5 textcolor">Ingredients</h4>
+          <div class="dd-table">{{recipe.ingredients}}</div>
+        </div>
+        <div class="col-md-6 mt-3">
+          <h4 class="display-5 textcolor">Directions</h4>
+          <div class="directions">{{recipe.directions}}</div>
+        </div>
+      </div>
+      <div class="row my-4 ">
+        <div class="col-md-6">
+          <h5 class="display-5"></h5>
+          <div class="user text-capitalize"><span class="textcolor">Username: </span>{{recipe.user_name}}</div>
+        </div>
+        <div class="col-md-6">
+          <h5 class="display-5"></h5>
+          <div class="last-modified"><span class="textcolor">Last Modified: </span>{{recipe.last_modified}}</div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-around mt-5 my-4">
+        <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" type="button" class="btn-sm btn-warning">Edit recipe</a>
+        <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" type="button" class="btn-sm btn-danger">Delete</a>
+      </div>
     </div>
   </div>
 </div>
-
-{% endblock %}
+{% endfor %} {% endblock %}
