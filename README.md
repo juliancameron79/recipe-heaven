@@ -4,7 +4,7 @@ For this project, I am to build a full-stack site that allows your 
 
 I have created a site that allows users to create store edit and delete cooking recipes that can be used to inspire.
 
-## UX
+## UX
 
 The site is aimed at cooking enthusiast of all levels that want to backup hand written recipes that could be miss placed or destroyed. The site will enable users to create store edit delete and share cooking recipes.
 
@@ -18,7 +18,7 @@ The site is aimed at cooking enthusiast of all levels that want to 
 
 - As a user, I want to see all available charging stations that are near me.
 
-### Wireframes/Mockups
+### Wireframes/Mockups
 
 Please find initial wireframe designs for<a href="wireframes-mockups/home-page-initial-wireframe-design.pdf">click here</a> Home page.
 Please find initial wireframe designs for<a href="wireframes-mockups/all-recipes-page-initial-wireframe-design.pdf>click here</a> All recipes page.
@@ -28,11 +28,11 @@ Please find initial wireframe designs for<a href="wireframes-mockups/edit-r
 
 ## Features
 
-### Existing Features
+### Existing Features
 
 Recipe Heaven is a cluster free site. The site is a five page site, broken up into home page, all recipes page, add recipe page recipe page page and an edit recipe page.
 
-#### Home page
+### Home page
 
 On this page users will be given a brief overview of the site along with recently added recipe section.
 
@@ -49,7 +49,7 @@ At the top of the page will be the navbar with a navbar brand link to index.html
 Below the navbar will be the main content section within that section, will be the recipes displayed in a grid system.
 At the very bottom will be the footer section with copyright info.
 
-#### Add Recipes page
+#### Add Recipes page
 
 On this page the user will fill in the categories and submit recipe to database.
 
@@ -57,7 +57,7 @@ At the top of the page will be the navbar with a navbar brand link to index.html
 Below the navbar will be the main content section within that section, will be a form with input fields and below that is a submit button.
 At the very bottom will be the footer section with copyright info.
 
-#### Recipes page page
+#### Recipes page page
 
 On this page the user can view the entire recipe from name, description, cuisine, serves, meal, prep, cooking, ingredients, directions username and last modified.
 
@@ -65,7 +65,7 @@ At the top of the page will be the navbar with a navbar brand link to index.html
 Below the navbar will be the main content section within that section, will be a form with input fields and below that is a edit recipe button and a delete button.
 At the very bottom will be the footer section with copyright info.
 
-#### Edit Recipe page
+#### Edit Recipe page
 
 On this page the user can edit all input fields of the entire recipe from name, description, cuisine, serves, meal, prep, cooking, ingredients, directions username and last modified.
 
@@ -87,7 +87,7 @@ I would also like to allow users to upload a picture to the recipe.
 
 This project uses HTML, CSS and JavaScript programming languages.
 
-- <a href="https://en.wikipedia.org/wiki/HTML5#References">**HTML**</a> and <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">**CSS**</a>
+- <a href="https://en.wikipedia.org/wiki/HTML5#References">**HTML**</a> and <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">**CSS**</a>
 
 - The project uses base languages used to create website
 
@@ -126,7 +126,7 @@ This project uses HTML, CSS and JavaScript programming languages.
 - <a href="https://autoprefixer.github.io">**AutoPrefixer**</a>
   - The project used AutoPrefixer to make sure all css prefixes were the most up to date versions
 
-## Testing
+## Testing
 
 - All code used on the site has been tested to ensure everything is working as expected
 
@@ -178,11 +178,11 @@ To clone this project from GitHub:
 
 - Recipe taken from BBC website.
 
-###Media
+### Media
 
 - The background image used was sourced from Pexels.
 
-### Code
+### Code
 
 ### Acknowledgements
 
