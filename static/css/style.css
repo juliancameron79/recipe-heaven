@@ -33,15 +33,6 @@
   max-width: 40rem;
 }
 
-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-footer p {
-  margin-bottom: 0.25rem;
-}
-
 .box-shadow {
   -webkit-box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
@@ -68,6 +59,15 @@ a.nav-link {
 
 /* footer */
 
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: 0.25rem;
+}
+
 .copyright {
   font-size: 0.7rem;
   margin: 0.2rem;
@@ -77,8 +77,4 @@ a.nav-link {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-h5.footer-contact-title {
-  font-weight: 300;
 }

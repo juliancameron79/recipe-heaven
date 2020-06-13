@@ -1,172 +1,191 @@
-# Recipe Heaven
+# Recipe Heaven
 
-For this project, I am to build a full-stack site that allows your users to manage a common dataset about a particular domain.
+For this project, I am to build a full-stack site that allows your users to manage a common dataset about a particular domain.
 
-I have created a site that allows users to locate Electric Vehicle charging stations near by and provide details of privately owned chargers to add to the EVCN.
+I have created a site that allows users to create store edit and delete cooking recipes that can be used to inspire.
 
-## UX
+## UX
 
-The site is aimed at cooking enthusiast of all levels that want to backup hand written recipes that migth be miss placed or destoryed. EV owners with and without privately owned charging stations on their properties. The site will find the users location and provide the user with all available charging stations, from public charging stations to private charging stations. The site also allows users to add their own charging station to EVCN via email.
+The site is aimed at cooking enthusiast of all levels that want to backup hand written recipes that could be miss placed or destroyed. The site will enable users to create store edit delete and share cooking recipes.
 
-- As a user type, I want to see all available charging stations that are near me.
+- As a user, I want to add recipes.
 
-### Wireframes/Mockups
+- As a user, I want to find recipes.
 
-Please find paper and pen initial wireframe design <a href="wireframes-mockups/initial-wireframe-design.jpg">here</a>.
+- As a user, I want to share recipes.
 
-Please find paper and pen mockup design <a href="wireframes-mockups/mockup-design.jpg">here</a>.
+- As a user, I want to find new recipes.
 
-## Features
+- As a user, I want to see all available charging stations that are near me.
 
-### Existing Features
+### Wireframes/Mockups
 
-EVCN is a super easy cluster free site. The site is a one page site, broken up into three main sections, Landing page EVCN Map and Contact Us
+Please find initial wireframe designs for<a href="wireframes-mockups/home-page-initial-wireframe-design.pdf">click here</a> Home page.
+Please find initial wireframe designs for<a href="wireframes-mockups/all-recipes-page-initial-wireframe-design.pdf>click here</a> All recipes page.
+Please find initial wireframe designs for<a href="wireframes-mockups/add-recipe-page-initial-wireframe-design.pdf">click here</a> Add recipe page.
+Please find initial wireframe designs for<a href="wireframes-mockups/recipe-page-initial-wireframe-design.pdf">click here</a> Recipe page.
+Please find initial wireframe designs for<a href="wireframes-mockups/edit-recipe-page-initial-wireframe-design.pdf">click here</a> edit recipe page.
 
-#### Home
+## Features
 
-Eye catching landing page providing a brief overview of what the site has to offer.
+### Existing Features
 
-#### EVCN Map
+Recipe Heaven is a cluster free site. The site is a five page site, broken up into home page, all recipes page, add recipe page recipe page page and an edit recipe page.
 
-EVCN Map section providing instant feedback on the users location.
+#### Home page
 
-#### Contact Us
+On this page users will be given a brief overview of the site along with recently added recipe section.
 
-Contact us section requires the user to input their name email address and details on their charging station.
+At the top of the page will be the navbar with a navbar brand link to index.html, also there will be links to all recipes page and add recipe page.
+Below the navbar will be the main content section within that section, will be a jumbotron with site name and brief outline of what the site offers.
+below that will be the recently added recipes section, displaying the most recent recipes added to the database.
+At the very bottom will be the footer section with copyright info.
 
-### Features Left to Implement
+#### All Recipes page
 
-#### Search function
+On this page the user can view all recipes in the database.
 
-A text input search function, that allows the user to search for charging stations in other areas.
+At the top of the page will be the navbar with a navbar brand link to index.html, also there will be links to all recipes page and add recipe page.
+Below the navbar will be the main content section within that section, will be the recipes displayed in a grid system.
+At the very bottom will be the footer section with copyright info.
 
-#### Infowindow
+#### Add Recipes page
 
-In future I would like to implement a popup info window for every marker of the search results to show the name address and type of charging station.
+On this page the user will fill in the categories and submit recipe to database.
 
-#### Side panel with brief description
+At the top of the page will be the navbar with a navbar brand link to index.html, also there will be links to all recipes page and add recipe page.
+Below the navbar will be the main content section within that section, will be a form with input fields and below that is a submit button.
+At the very bottom will be the footer section with copyright info.
 
-The side panel will display name address type of charging station number of chargers, avaiablitiy of chargers and a rating of the station. A get direction with way points button.
+#### Recipes page page
 
-#### Members sign in section
+On this page the user can view the entire recipe from name, description, cuisine, serves, meal, prep, cooking, ingredients, directions username and last modified.
 
-I would also like to add a sign up and login button that would give members access to a list of privately owed chargers that the members could use when they are available.
+At the top of the page will be the navbar with a navbar brand link to index.html, also there will be links to all recipes page and add recipe page.
+Below the navbar will be the main content section within that section, will be a form with input fields and below that is a edit recipe button and a delete button.
+At the very bottom will be the footer section with copyright info.
 
-## Technologies Used
+#### Edit Recipe page
 
-This project uses HTML, CSS and JavaScript programming languages.
+On this page the user can edit all input fields of the entire recipe from name, description, cuisine, serves, meal, prep, cooking, ingredients, directions username and last modified.
 
-- <a href="https://en.wikipedia.org/wiki/HTML5#References">**HTML**</a> and <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">**CSS**</a>
+At the top of the page will be the navbar with a navbar brand link to index.html, also there will be links to all recipes page and add recipe page.
+Below the navbar will be the main content section within that section, will be a form with input fields and below that is an update recipe button.
+At the very bottom will be the footer section with copyright info.
 
-  - The project uses base languages used to create website
+### Features Left to Implement
 
-- <a href="https://en.wikipedia.org/wiki/JavaScript">**Javascript**</a>
+#### Search function
 
-  - Required for the dynamic responsive website
+A text input search function, that allows the user to search for recipes by name or ingredient.
 
-- <a href="https://code.visualstudio.com/">**VS Code**</a>
+#### Recipe image
 
-  - The project was developed useing VS Code for building the website
+I would also like to allow users to upload a picture to the recipe.
 
-- <a href="https://www.python.org/">**Python**</a>
+## Technologies Used
 
-  - The project uses Python to write the logic of the site
+This project uses HTML, CSS and JavaScript programming languages.
 
-- <a href="https://flask.palletsprojects.com/en/1.1.x/">**Flask**</a>
+- <a href="https://en.wikipedia.org/wiki/HTML5#References">**HTML**</a> and <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">**CSS**</a>
 
-  - The project uses Flask's micro framework
+- The project uses base languages used to create website
 
-- <a href="https://www.mongodb.com/">**MongoDB**</a>
+- <a href="https://en.wikipedia.org/wiki/JavaScript">**Javascript**</a>
 
-  - The project uses MongoDB to store manipulate and delete data
+- Required for the dynamic responsive website
 
-- <a href="https://jinja.palletsprojects.com/en/2.11.x/">**jinja**</a>
+- <a href="https://code.visualstudio.com/">**VS Code**</a>
 
-  - The project uses Jinja to display the data Flask app and MongoDB to the user
+- The project was developed using VS Code for building the website
 
-- <a href="https://getbootstrap.com/">**Bootstrap**</a>
+- <a href="https://www.python.org/">**Python**</a>
 
-  - The project uses Bootstrap to simplify the structure of the website and make the website responsive easily
+- The project uses Python to write the logic of the site
 
-- <a href="https://fonts.google.com">**Google Fonts**</a>
+- <a href="https://flask.palletsprojects.com/en/1.1.x/">**Flask**</a>
 
-  - The project uses Google fonts to style the website fonts
+- The project uses Flask's micro framework
 
-- <a href="https://fontawesome.com/">**FontAwesome**</a>
+- <a href="https://www.mongodb.com/">**MongoDB**</a>
 
-  - The project uses Fontawesome to provide icons
+- The project uses MongoDB to store manipulate and delete data
 
-- <a href="https://github.com">**GitHub**</a>
+- <a href="https://getbootstrap.com/">**Bootstrap**</a>
 
-  - This project uses GitHub to store and share all project code remotely
+- The project uses Bootstrap to simplify the structure of the website and make the website responsive easily
 
-- <a href="https://autoprefixer.github.io">**AutoPrefixer**</a>
-  - The project used AutoPrefixer to make sure all css prefixes were the most up to date versions
+- <a href="https://fonts.google.com">**Google Fonts**</a>
 
-## Testing
+- The project uses Google fonts to style the website fonts
 
-- All code used on the site has been tested to ensure everything is working as expected
+- <a href="https://github.com">**GitHub**</a>
 
-- All code used on the site has been tested across multiple devices via DevTool option in Chrome.
+- This project uses GitHub to store and share all project code remotely
 
-  - Galaxy S5, click <a href="testing/devices/galaxy-s5-screen-shot.jpg">here</a> to view screen shot.
-  - Pixel 2 XL, click <a href="testing/devices/pixel2-xl-screen-shot.jpg">here</a> to view screen shot.
-  - iPhone 6/7/8, click <a href="testing/devices/iphone-6-7-8-screen-shot.jpg">here</a> to view screen shot.
-  - iPhone X, click <a href="testing/devices/iphone-x-screen-shot.jpg">here</a> to view screen shot.
-  - iPad, click <a href="testing/devices/ipad-screen-shot.jpg">here</a> to view screen shot.
+- <a href="https://autoprefixer.github.io">**AutoPrefixer**</a>
+  - The project used AutoPrefixer to make sure all css prefixes were the most up to date versions
 
-- Site has been viewed and tested in the following browsers:
-  - Google Chrome, click <a href="testing/browsers/google-chrome-screen-shot.jpg">here</a> to view screen shot.
-  - Opera, click <a href="testing/browsers/opera-screen-shot.jpg">here</a> to view screen shot.
-  - Microsoft Edge, click <a href="testing/browsers/microsoft-edge-screen-shot.jpg">here</a> to view screen shot.
-  - Mozilla Firefox, click <a href="testing/browsers/firefox-screen-shot.jpg">here</a> to view screen shot.
-  - Safari, click <a href="testing/browsers/safari-screen-shot.jpg">here</a> to view screen shot.
+## Testing
 
-## Deployment
+- All code used on the site has been tested to ensure everything is working as expected
 
-This project was developed using **VS Code**, committed to git and pushed to GitHub using the built in function within VS Code.
+- All code used on the site has been tested across multiple devices via DevTool option in Chrome.
 
-To deploy EVCN to GitHub pages from the GitHub repository.
+- Galaxy S5, click <a href="testing/devices/rh-galaxy-s5-screen-shot.jpg">here</a> to view screen shot.
+  - Pixel 2 XL, click <a href="testing/devices/rh-pixel2-xl-screen-shot.jpg">here</a> to view screen shot.
+  - iPhone 6/7/8, click <a href="testing/devices/rh-iphone-6-7-8-screen-shot.jpg">here</a> to view screen shot.
+  - iPad, click <a href="testing/devices/rh-ipad-screen-shot.jpg">here</a> to view screen shot.
 
-1. Logged into GitHub.
-2. From the list of repositories on the screen, select uliCameron/EVC-network.
-3. From the menu items near the top of the page, select Settings.
-4. Scroll down to the GitHub Pages section.
-5. Under Source click the drop-down menu labelled None and select Master Branch.
-6. On selecting Master Branch the page is automatically refreshed, ECVN is now deployed.
-7. Scroll back down to the GitHub Pages selection to retrieve the link to the deployed website.
+- Site has been viewed and tested in the following browsers:
+  - Google Chrome, click <a href="testing/browsers/rh-google-chrome-screen-shot.jpg">here</a> to view screen shot.
+  - Opera, click <a href="testing/browsers/rh-opera-screen-shot.jpg">here</a> to view screen shot.
+  - Microsoft Edge, click <a href="testing/browsers/rh-microsoft-edge-screen-shot.jpg">here</ to view screen shot.
+  - Mozilla Firefox, click <a href="testing/browsers/rh-firefox-screen-shot.jpg">here</a> to view screen shot.
+  - Safari, click <a href="testing/browsers/rh-safari-screen-shot.jpg">here</a> to view screen shot.
 
-### How to run this project locally
+## Deployment
 
-To clone this project from GitHub:
+This project was developed using **VS Code**, committed to git and pushed to GitHub using the built in function within VS Code.
 
-1. Follow this link to the EVC-network GitHub repository.
-2. Under the repository name, click “Clone or download”.
-3. In the Clone with HTTPs section, copy the clone URL for the repository.
-4. In your local IDE open Git Bash.
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type git clone, and then paste the URL you copied in step 3.
+To deploy Recipe Heaven to GitHub pages from the GitHub repository.
 
-7. Press Enter. Your local clone will be created.
-   Further reading and troubleshooting on cloning a repository from GitHub here.
+1. Logged into GitHub.
+2. From the list of repositories on the screen, select JuliCameron/recipe-heaven.
+3. From the menu items near the top of the page, select Settings.
+4. Scroll down to the GitHub Pages section.
+5. Under Source click the drop-down menu labelled None and select Master Branch.
+6. On selecting Master Branch the page is automatically refreshed, ECVN is now deployed.
+7. Scroll back down to the GitHub Pages selection to retrieve the link to the deployed website.
 
-## Credits
+### How to run this project locally
 
-### Content
+To clone this project from GitHub:
 
-- All text in this project was written by the developer.
+1. Follow this link to the EVC-network GitHub repository.
+2. Under the repository name, click “Clone or download”.
+3. In the Clone with HTTPs section, copy the clone URL for the repository.
+4. In your local IDE open Git Bash.
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type git clone, and then paste the URL you copied in step 3.
 
-### Media
+7. Press Enter. Your local clone will be created.
+   Further reading and troubleshooting on cloning a repository from GitHub here.
 
-- The background image used was sourced from Pexels.
-- The map markers used to mark locations on the map was sourced from Google Maps.
+## Credits
 
-### Code
+### Content
 
-- Code for Google Maps api taken from youtube tutorial.
+- Recipe taken from BBC website.
 
-### Acknowledgements
+### Media
 
-#### Disclaimer
+- The background image used was sourced from Pexels.
 
-The content of this website, including the images used, are for educational purposes only.
+### Code
+
+### Acknowledgements
+
+#### Disclaimer
+
+The content of this website, including the images used, are for educational purposes only.
