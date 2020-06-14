@@ -142,9 +142,9 @@ This project uses HTML, CSS and JavaScript programming languages.
   - Opera, click <a href="testing/browsers/rh-opera-screen-shot.jpg">here</a> to view screen shot.
   - Microsoft Edge, click <a href="testing/browsers/rh-microsoft-edge-screen-shot.jpg">here</ to view screen shot.
   - Mozilla Firefox, click <a href="testing/browsers/rh-firefox-screen-shot.jpg">here</a> to view screen shot.
-  - Safari, click <a href="testing/browsers/rh-safari-screen-shot.jpg">here</a> to view screen shot.
+  - Safari, click <a href="testing/browsers/rh-safari-screen-shot.jpg">here</a> to view screen shot.
 
-## Deployment
+## Deployment
 
 This project was developed using **VS Code**, committed to git and pushed to GitHub using the built in function within VS Code.
 
@@ -158,7 +158,7 @@ To deploy Recipe Heaven to GitHub pages from the GitHub repository.
 6. On selecting Master Branch the page is automatically refreshed, ECVN is now deployed.
 7. Scroll back down to the GitHub Pages selection to retrieve the link to the deployed website.
 
-### How to run this project locally
+### How to run this project locally
 
 To clone this project from GitHub:
 
