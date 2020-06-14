@@ -26,13 +26,13 @@ Please find initial wireframe designs for<a href="wireframes-mockups/add-re
 Please find initial wireframe designs for<a href="wireframes-mockups/recipe-page-initial-wireframe-design.pdf">click here</a> Recipe page.
 Please find initial wireframe designs for<a href="wireframes-mockups/edit-recipe-page-initial-wireframe-design.pdf">click here</a> edit recipe page.
 
-## Features
+## Features
 
 ### Existing Features
 
 Recipe Heaven is a cluster free site. The site is a five page site, broken up into home page, all recipes page, add recipe page recipe page page and an edit recipe page.
 
-### Home page
+#### Home page
 
 On this page users will be given a brief overview of the site along with recently added recipe section.
 
@@ -41,7 +41,7 @@ Below the navbar will be the main content section within that section, will be a
 below that will be the recently added recipes section, displaying the most recent recipes added to the database.
 At the very bottom will be the footer section with copyright info.
 
-#### All Recipes page
+#### All Recipes page
 
 On this page the user can view all recipes in the database.
 
@@ -120,6 +120,8 @@ This project uses HTML, CSS and JavaScript programming languages.
 - The project uses Google fonts to style the website fonts
 
 - <a href="https://github.com">**GitHub**</a>
+
+- <a href="https://github.com">**test**</a>
 
 - This project uses GitHub to store and share all project code remotely
 
