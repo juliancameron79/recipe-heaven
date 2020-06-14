@@ -172,9 +172,9 @@ To clone this project from GitHub:
 7. Press Enter. Your local clone will be created.
    Further reading and troubleshooting on cloning a repository from GitHub here.
 
-## Credits
+## Credits
 
-### Content
+### Content
 
 - Recipe taken from BBC website.
 
@@ -184,8 +184,8 @@ To clone this project from GitHub:
 
 ### Code
 
-### Acknowledgements
+### Acknowledgements
 
-#### Disclaimer
+#### Disclaimer
 
 The content of this website, including the images used, are for educational purposes only.
