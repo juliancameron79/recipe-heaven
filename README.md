@@ -18,11 +18,11 @@ The site is aimed at cooking enthusiast of all levels that want to 
 
 ### Wireframes/Mockups
 
-- Please find initial wireframe designs for<a href="wireframes-mockups/home-page-initial-wireframe-design.pdf">click here</a> Home page.\*
-- Please find initial wireframe designs for<a href="wireframes-mockups/all-recipes-page-initial-wireframe-design.pdf>click here</a> All recipes page.\*
-- Please find initial wireframe designs for<a href="wireframes-mockups/add-recipe-page-initial-wireframe-design.pdf">click here</a> Add recipe page.\*
-- Please find initial wireframe designs for<a href="wireframes-mockups/recipe-page-initial-wireframe-design.pdf">click here</a> Recipe page.\*
-- Please find initial wireframe designs for<a href="wireframes-mockups/edit-recipe-page-initial-wireframe-design.pdf">click here</a> edit recipe page.\*
+- Please find initial wireframe design for Home page, click <a href="wireframes-mockups/home-page-initial-wireframe-design.pdf">here</a>.
+- Please find initial wireframe design for All recipes page, click <a href="wireframes-mockups/all-recipes-page-initial-wireframe-design.pdf">here</a>.
+- Please find initial wireframe design for Add recipe page, click <a href="wireframes-mockups/add-recipe-page-initial-wireframe-design.pdf">here</a>.
+- Please find initial wireframe design for Recipe page, click <a href="wireframes-mockups/recipe-page-initial-wireframe-design.pdf">here</a>.
+- Please find initial wireframe design for Edit recipe page, click <a href="wireframes-mockups/edit-recipe-page-initial-wireframe-design.pdf">here</a>.
 
 ## Features
 
