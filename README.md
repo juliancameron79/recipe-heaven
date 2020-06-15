@@ -151,7 +151,7 @@ This project was developed using **VS Code**, committed to git and pu
 To deploy Recipe Heaven to GitHub pages from the GitHub repository.
 
 1. Logged into GitHub.
-2. From the list of repositories on the screen, select JuliCameron/recipe-heaven.
+2. From the list of repositories on the screen, select juliancameron79/recipe-heaven.
 3. From the menu items near the top of the page, select Settings.
 4. Scroll down to the GitHub Pages section.
 5. Under Source click the drop-down menu labelled None and select Master Branch.
