@@ -152,7 +152,7 @@ Live demo can be viewed <a href="https://recipe-heaven-cookbook.herokuapp.com/">
 
 ### Content
 
-- Recipe taken from BBC website.
+- Recipes taken from allrecipes website.
 
 ### Media
 
