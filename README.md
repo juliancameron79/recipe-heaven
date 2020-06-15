@@ -88,43 +88,43 @@ This project uses HTML, CSS and JavaScript programming languages.
 - <a href="https://en.wikipedia.org/wiki/HTML5#References">**HTML**</a> and
   <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">**CSS**</a>
 
-- The project uses base languages used to create website
+  - The project uses base languages used to create website
 
 - <a href="https://en.wikipedia.org/wiki/JavaScript">**Javascript**</a>
 
-- This project uses Javascript for the dynamic responsive website
+  - This project uses Javascript for the dynamic responsive website
 
 - <a href="https://code.visualstudio.com">**VS Code**</a>
 
-- This project was developed using VS Code for building the website
+  - This project was developed using VS Code for building the website
 
 - <a href="https://www.python.org">**Python**</a>
 
-- This project uses Python to write the logic for the site
+  - This project uses Python to write the logic for the site
 
 - <a href="https://flask.palletsprojects.com/en/1.1.x">**Flask**</a>
 
-- This project uses Flask's micro framework
+  - This project uses Flask's micro framework
 
 - <a href="https://www.mongodb.com">**MongoDB**</a>
 
-- This project uses MongoDB to store data
+  - This project uses MongoDB to store data
 
 - <a href="https://getbootstrap.com">**Bootstrap**</a>
 
-- This project uses Bootstrap to simplify the structure of the website and make the website responsive easily
+  - This project uses Bootstrap to simplify the structure of the website and make the website responsive easily
 
 - <a href="https://fonts.google.com">**Google Fonts**</a>
 
-- This project uses Google fonts to style the website fonts
+  - This project uses Google fonts to style the website fonts
 
--<a href="https://github.com">**GitHub**</a>
+- <a href="https://github.com">**GitHub**</a>
 
-- This project uses GitHub to store and share all project code remotely
+  - This project uses GitHub to store and share all project code remotely
 
 - <a href="https://autoprefixer.github.io">**AutoPrefixer**</a>
 
-- The project used AutoPrefixer to make sure all css prefixes were the most up to date versions
+  - The project used AutoPrefixer to make sure all css prefixes were the most up to date versions
 
 ## Testing
 
