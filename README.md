@@ -71,17 +71,17 @@ At the top of the page will be the navbar with a navbar brand link to index.html
 Below the navbar will be the main content section within that section, will be a form with input fields and below that is an update recipe button.
 At the very bottom will be the footer section with copyright info.
 
-### Features Left to Implement
+### Features Left to Implement
 
-#### Search function
+#### Search function
 
 A text input search function, that allows the user to search for recipes by name or ingredient.
 
-#### Recipe image
+#### Recipe image
 
 I would also like to allow users to upload a picture to the recipe.
 
-## Technologies Used
+## Technologies Used
 
 This project uses HTML, CSS and JavaScript programming languages.
 
@@ -131,23 +131,21 @@ This project uses HTML, CSS and JavaScript programming languages.
 
 ## Testing
 
-- All code used on the site has been tested to ensure everything is working as expected
+All code used on the site has been tested to ensure everything is working as expected
 
-- All code used on the site has been tested across multiple devices via DevTool option in Chrome.
-
-- Galaxy S5, click <a href="testing/devices/rh-galaxy-s5-screen-shot.jpg">here</a> to view screen shot.
+All code used on the site has been tested across multiple devices via DevTool option in Chrome.
 
 - Pixel 2 XL, click <a href="testing/devices/rh-pixel2-xl-screen-shot.jpg">here</a> to view screen shot.
-- iPhone 6/7/8, click <a href="testing/devices/rh-iphone-6-7-8-screen-shot.jpg">here</a> to view screen shot.
-- iPad, click <a href="testing/devices/rh-ipad-screen-shot.jpg">here</a> to view screen shot.
+- iPhone 6/7/8, click <a href="testing/devices/rh-iphone-6-7-8-screen-shot.jpg">here</a> to view screen shot.
+- iPad, click <a href="testing/devices/rh-ipad-screen-shot.jpg">here</a> to view screen shot.
 
-- Site has been viewed and tested in the following browsers:
-- Google Chrome, click <a href="testing/browsers/rh-google-chrome-screen-shot.jpg">here</a> to view screen shot.
-- Opera, click <a href="testing/browsers/rh-opera-screen-shot.jpg">here</a> to view screen shot.
-- Microsoft Edge, click <a href="testing/browsers/rh-microsoft-edge-screen-shot.jpg">here</ to view screen shot.
-- Mozilla Firefox, click <a href="testing/browsers/rh-firefox-screen-shot.jpg">here</a> to view screen shot.
+Site has been viewed and tested in the following browsers:
 
-- Safari, click <a href="testing/browsers/rh-safari-screen-shot.jpg">here</a> to view screen shot.
+- Google Chrome, click <a href="testing/browsers/rh-google-chrome-screen-shot.jpg">here</a> to view screen shot.
+- Opera, click <a href="testing/browsers/rh-opera-screen-shot.jpg">here</a> to view screen shot.
+- Microsoft Edge, click <a href="testing/browsers/rh-microsoft-edge-screen-shot.jpg">here</a> to view screen shot.
+- Mozilla Firefox, click <a href="testing/browsers/rh-firefox-screen-shot.jpg">here</a> to view screen shot.
+- Safari, click <a href="testing/browsers/rh-safari-screen-shot.jpg">here</a> to view screen shot.
 
 ## Deployment
 
