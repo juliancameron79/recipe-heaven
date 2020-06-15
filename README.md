@@ -205,23 +205,20 @@ Before beginning this step, you need to complete the above step 1. Clone Website
   - Find your App name on the dash board, and enter.
   - Click Settings, and locate Config Vars, and fill in like shown below (Just edit out the placeholder text).
 
-- Key Value
-- IP 0.0.0.0
-- PORT 5000
-- MONGO_URI "mongodb+srv://myRoot:MONGODB-PASSWORD@CLUSTER-NAME-96wib.mongodb.net/DATABASE-NAME?retryWrites=true&w=majority"
+- Key | Value
+- IP | 0.0.0.0
+- PORT | 5000
+- MONGO_URI | mongodb+srv://myRoot:MONGODB-PASSWORD@CLUSTER-NAME-96wib.mongodb.net/DATABASE-NAME?retryWrites=true&w=majority
 - MONGO_DBNAME Name of the database
-
-2. Setting up our files
-   At this stage, go back to your IDE, we are now setting everything up for pushing to Heroku.
 
 1. If the Procfile is missing, please preform the following command in your terminal echo web: python3 run.py > Procfile
 1. If the requirements.txt is missing, please preform the following command in your terminal pip3 freeze > requirements.txt
 
-1. Deploy to Heroku
-   In your Terminal type heroku login.
-   Then git push heroku master .
-   Open Heroku website.
-   Navigate to the app (The Happy Bun), and click Open App, and now everything should be running.
+- Deploy to Heroku
+  - In your Terminal type heroku login.
+  - Then git push heroku master.
+  - Open Heroku website.
+  - Navigate to the app (Recipe Heaven), and click on Open App.
 
 ## Credits
 
