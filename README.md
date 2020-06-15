@@ -146,31 +146,7 @@ Site has been viewed and tested in the following browsers:
 
 ## Deployment
 
-This project was developed using **VS Code**, committed to git and pushed to GitHub using the built in function within VS Code.
-
-To deploy Recipe Heaven to GitHub pages from the GitHub repository.
-
-1. Logged into GitHub.
-2. From the list of repositories on the screen, select juliancameron79/recipe-heaven.
-3. From the menu items near the top of the page, select Settings.
-4. Scroll down to the GitHub Pages section.
-5. Under Source click the drop-down menu labelled None and select Master Branch.
-6. On selecting Master Branch the page is automatically refreshed, ECVN is now deployed.
-7. Scroll back down to the GitHub Pages selection to retrieve the link to the deployed website.
-
-### How to run this project locally
-
-To clone this project from GitHub:
-
-1. Follow this link to the EVC-network GitHub repository.
-2. Under the repository name, click “Clone or download”.
-3. In the Clone with HTTPs section, copy the clone URL for the repository.
-4. In your local IDE open Git Bash.
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type git clone, and then paste the URL you copied in step 3.
-
-7. Press Enter. Your local clone will be created.
-   Further reading and troubleshooting on cloning a repository from GitHub here.
+Live demo can be viewed <a href="https://recipe-heaven-cookbook.herokuapp.com/">here</a>
 
 ## Credits
 
