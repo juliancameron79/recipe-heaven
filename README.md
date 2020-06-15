@@ -148,6 +148,81 @@ Site has been viewed and tested in the following browsers:
 
 Live demo can be viewed <a href="https://recipe-heaven-cookbook.herokuapp.com/">here</a>
 
+The following steps explain how you can get the website running on heroku locally.
+
+For this project, there are a total of 2 branches, the master branch is the latest up to date, and the one to focus on.
+
+- Master
+- dev
+
+### How to Clone and setup website locally
+
+- Clone website
+
+  - Go to GitHub
+  - Click Repositories.
+  - Locate recipe-heaven.
+  - Open recipe-heaven.
+  - Click the green button clone to download.
+  - Or clone from URL using the following command in terminal: got clone https://github.com/juliancameron79/recipe-heaven.git
+
+- Installing Requirements.
+  Once you have the project cloned on your computer.
+
+  - Open the Terminal and navigate to recipe-heaven folder on your computer.
+  - Install the libraries from requirements.txt by typing pip3 install -r requirements.txt
+
+- Setting up the database keys
+  Once the project is cloned, and you have the libraries installed from requirements.txt, we now must setup the database.
+
+  - Create a python file and place it outside of the folder structure, next to app.py.
+  - Inside the newly created file, you need to add information to 2 variables and 1 import.
+  - At the top of the file add the following line import os.
+  - Then add the following 2 lines below.
+    os.environ["Mongo_URI"] = "mongodb+srv://myRoot:MONGODB-PASSWORD@CLUSTER-NAME-96wib.mongodb.net/DATABASE-NAME?retryWrites=true&w=majority".
+  - Add os.environ["MONGO_DBNAME"] = 'Your database name'.
+
+- Understand the Connection string
+  mongodb+srv://myRoot:MONGODB-PASSWORD@CLUSTER-NAME-96wib.mongodb.net/DATABASE-NAME?retryWrites=true&w=majority
+
+  - MongoDB-Password, you need to provide the password for your MongoDB atlas account.
+  - Cluster-Name is the name you create when setting up MongoDB for the first time, it is where your databases are stored, often shown at the top of the page.
+  - Database-Name this is the name of the database you have created, can be found under the Collections tab inside MongoDB Atlas.
+
+- Running the Project locally
+  - Run app.py
+  - Paste http://0.0.0.0:5000/ into your browser.
+
+Deploy Recipe Heaven on Heroku
+Before beginning this step, you need to complete the above step 1. Clone Website.
+
+- Setting up Heroku
+
+  - Create an account on Heroku.
+  - Click New button, then Click Create new app.
+  - Give it a name and choose your region.
+  - Click Create App.
+  - Find your App name on the dash board, and enter.
+  - Click Settings, and locate Config Vars, and fill in like shown below (Just edit out the placeholder text).
+
+- Key Value
+- IP 0.0.0.0
+- PORT 5000
+- MONGO_URI "mongodb+srv://myRoot:MONGODB-PASSWORD@CLUSTER-NAME-96wib.mongodb.net/DATABASE-NAME?retryWrites=true&w=majority"
+- MONGO_DBNAME Name of the database
+
+2. Setting up our files
+   At this stage, go back to your IDE, we are now setting everything up for pushing to Heroku.
+
+1. If the Procfile is missing, please preform the following command in your terminal echo web: python3 run.py > Procfile
+1. If the requirements.txt is missing, please preform the following command in your terminal pip3 freeze > requirements.txt
+
+1. Deploy to Heroku
+   In your Terminal type heroku login.
+   Then git push heroku master .
+   Open Heroku website.
+   Navigate to the app (The Happy Bun), and click Open App, and now everything should be running.
+
 ## Credits
 
 ### Content
