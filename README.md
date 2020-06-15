@@ -1,6 +1,6 @@
 # Recipe Heaven
 
-For this project, I am to build a full-stack site that allows your users to manage a common dataset about a particular domain.
+For this project, I am to build a full-stack site that allows users to manage a common dataset about a particular domain.
 
 I have created a site that allows users to create store edit and delete cooking recipes that can be used to inspire.
 
@@ -28,7 +28,7 @@ The site is aimed at cooking enthusiast of all levels that want to 
 
 ### Existing Features
 
-Recipe Heaven is a cluster free site. The site is a five page site, broken up into home page, all recipes page, add recipe page recipe page page and an edit recipe page.
+Recipe Heaven is a clutter free site. The site is a five page site, broken up into home page, all recipes page, add recipe page recipe page page and an edit recipe page.
 
 #### Home page
 
@@ -88,7 +88,7 @@ This project uses HTML, CSS and JavaScript programming languages.
 - <a href="https://en.wikipedia.org/wiki/HTML5#References">**HTML**</a> and
   <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">**CSS**</a>
 
-  - The project uses base languages used to create website
+  - This project uses base languages used to create website
 
 - <a href="https://en.wikipedia.org/wiki/JavaScript">**Javascript**</a>
 
@@ -150,6 +150,8 @@ Live demo can be viewed <a href="https://recipe-heaven-cookbook.herokuapp.com/">
 
 The following steps explain how you can get the website running on heroku locally.
 
+### Branches
+
 For this project, there are a total of 2 branches, the master branch is the latest up to date, and the one to focus on.
 
 - Master
@@ -157,7 +159,7 @@ For this project, there are a total of 2 branches, the master branch is the late
 
 ### How to Clone and setup website locally
 
-- Clone website
+- **Clone website**
 
   - Go to GitHub
   - Click Repositories.
@@ -166,7 +168,7 @@ For this project, there are a total of 2 branches, the master branch is the late
   - Click the green button clone to download.
   - Or clone from URL using the following command in terminal: got clone https://github.com/juliancameron79/recipe-heaven.git
 
-- Installing Requirements.
+- **Installing Requirements**
   Once you have the project cloned on your computer.
 
   - Open the Terminal and navigate to recipe-heaven folder on your computer.
@@ -179,24 +181,18 @@ For this project, there are a total of 2 branches, the master branch is the late
   - Inside the newly created file, you need to add information to 2 variables and 1 import.
   - At the top of the file add the following line import os.
   - Then add the following 2 lines below.
-    os.environ["Mongo_URI"] = "mongodb+srv://myRoot:MONGODB-PASSWORD@CLUSTER-NAME-96wib.mongodb.net/DATABASE-NAME?retryWrites=true&w=majority".
+  - os.environ["Mongo_URI"] = "mongodb+srv://myRoot:MONGODB-PASSWORD@CLUSTER-NAME-96wib.mongodb.net/DATABASE-NAME?retryWrites=true&w=majority".
   - Add os.environ["MONGO_DBNAME"] = 'Your database name'.
 
-- Understand the Connection string
-  mongodb+srv://myRoot:MONGODB-PASSWORD@CLUSTER-NAME-96wib.mongodb.net/DATABASE-NAME?retryWrites=true&w=majority
-
-  - MongoDB-Password, you need to provide the password for your MongoDB atlas account.
-  - Cluster-Name is the name you create when setting up MongoDB for the first time, it is where your databases are stored, often shown at the top of the page.
-  - Database-Name this is the name of the database you have created, can be found under the Collections tab inside MongoDB Atlas.
-
-- Running the Project locally
+- **Running the Project locally**
   - Run app.py
   - Paste http://0.0.0.0:5000/ into your browser.
 
-Deploy Recipe Heaven on Heroku
-Before beginning this step, you need to complete the above step 1. Clone Website.
+### Deploy Recipe Heaven on Heroku
 
-- Setting up Heroku
+Complete the above, Clone Website before starting.
+
+- **Setting up Heroku**
 
   - Create an account on Heroku.
   - Click New button, then Click Create new app.
@@ -211,10 +207,10 @@ Before beginning this step, you need to complete the above step 1. Clone Website
 - MONGO_URI | mongodb+srv://myRoot:MONGODB-PASSWORD@CLUSTER-NAME-96wib.mongodb.net/DATABASE-NAME?retryWrites=true&w=majority
 - MONGO_DBNAME Name of the database
 
-1. If the Procfile is missing, please preform the following command in your terminal echo web: python3 run.py > Procfile
-1. If the requirements.txt is missing, please preform the following command in your terminal pip3 freeze > requirements.txt
+- If the Procfile is missing, preform the following command in your terminal echo web: python3 run.py > Procfile
+- If the requirements.txt is missing, preform the following command in your terminal pip3 freeze > requirements.txt
 
-- Deploy to Heroku
+- **Deploy to Heroku**
   - In your Terminal type heroku login.
   - Then git push heroku master.
   - Open Heroku website.
