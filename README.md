@@ -16,13 +16,13 @@ The site is aimed at cooking enthusiast of all levels that want to 
 
 - As a user, I want to find new recipes.
 
-### Wireframes/Mockups
+### Wireframes
 
-- Please find initial wireframe design for Home page, click <a href="wireframes-mockups/home-page-initial-wireframe-design.pdf">here</a>.
-- Please find initial wireframe design for All recipes page, click <a href="wireframes-mockups/all-recipes-page-initial-wireframe-design.pdf">here</a>.
-- Please find initial wireframe design for Add recipe page, click <a href="wireframes-mockups/add-recipe-page-initial-wireframe-design.pdf">here</a>.
-- Please find initial wireframe design for Recipe page, click <a href="wireframes-mockups/recipe-page-initial-wireframe-design.pdf">here</a>.
-- Please find initial wireframe design for Edit recipe page, click <a href="wireframes-mockups/edit-recipe-page-initial-wireframe-design.pdf">here</a>.
+- Please find initial wireframe design for Home page, click <a href="wireframes/home-page-initial-wireframe-design.pdf">here</a>.
+- Please find initial wireframe design for All recipes page, click <a href="wireframes/all-recipes-page-initial-wireframe-design.pdf">here</a>.
+- Please find initial wireframe design for Add recipe page, click <a href="wireframes/add-recipe-page-initial-wireframe-design.pdf">here</a>.
+- Please find initial wireframe design for Recipe page, click <a href="wireframes/recipe-page-initial-wireframe-design.pdf">here</a>.
+- Please find initial wireframe design for Edit recipe page, click <a href="wireframes/edit-recipe-page-initial-wireframe-design.pdf">here</a>.
 
 ## Features
 
