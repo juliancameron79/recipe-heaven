@@ -230,6 +230,10 @@ Complete the above, Clone Website before starting.
 
 ### Acknowledgements
 
+I had trouble with the deployment section write up but lucky I found <a href="https://github.com/Pyleks/Milestone-Project-3">pyleks</a>that helped me.
+
+I got lots of inspiration from watching is video <a href="https://www.youtube.com/watch?v=CxohCB9Q_GA">Recipe Database Project - Python / Flask</a>
+
 #### Disclaimer
 
 The content of this website, including the images used, are for educational purposes only.
