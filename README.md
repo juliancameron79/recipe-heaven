@@ -1,6 +1,6 @@
 # Recipe Heaven
 
-For this project, I am to build a full-stack site that allows users to manage a common dataset about a particular domain.
+For this project, I am to build a Full-stack site that allows users to manage a common dataset about a particular domain.
 
 I have created a site that allows users to create store edit and delete cooking recipes that can be used to inspire.
 
